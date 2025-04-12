@@ -1,11 +1,16 @@
 
-import React from "react";
+import React, { useContext } from "react";
 import './../styles/App.css';
+import { AuthContext } from "../../authContext";
 
 const App = () => {
+  const {isAuthenticated, handleChange} = useContext(AuthContext)
   return (
     <div>
-        {/* Do not remove the main div */}
+      <h1>Click on the checkbox to get authenticated</h1>
+      {isAuthenticated !== true ? <p>you are not authenticated</p> : <p>You are now authenticated, you can proceed</p>}
+      <input type="checkbox" onChange={handleChange} />&nbsp;
+      <span>I'm not a robot</span>
     </div>
   )
 }
