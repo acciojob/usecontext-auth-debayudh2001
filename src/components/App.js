@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <h1>Click on the checkbox to get authenticated</h1>
-      {isAuthenticated !== true ? <p>you are not authenticated</p> : <p>You are now authenticated, you can proceed</p>}
+      {isAuthenticated !== true ? <p>you are not authenticated</p> : <p className="authText">You are now authenticated, you can proceed</p>}
       <input type="checkbox" onChange={handleChange} />&nbsp;
       <span>I'm not a robot</span>
     </div>
